@@ -42,6 +42,7 @@ void circle(){
      printf("area = %f\n",(3.14 * r *r));
     printf("perimeter = %f\n",(2 * 3.14 *r));
 }
+
 void triangle(){
     int s;
     printf("enter side ");
