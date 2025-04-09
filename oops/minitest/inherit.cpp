@@ -43,6 +43,6 @@ int main(){
     student.setName("girdhar");
     student.setNumber("24u023007");
     student.display();
-    student.Person::display();
+    student.Student::display();
     return 0;
 }

@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include <iostream>
-#include <ostream>
+#include<iostream>
+#include<ostream>
 
 struct Person{
    int age;

@@ -6,6 +6,9 @@ class Matrix{
     int **matrix;
     int row,col;
     public: 
+        Matrix() {
+            matrix = nullptr;
+        }
         Matrix(int x, int y){
             this->row = x;
             this->col = y;
@@ -18,6 +21,10 @@ class Matrix{
         friend Matrix operator*(Matrix& mat1, Matrix& mat2);
 
         void display(){
+            if(matrix==nullptr){
+                cout<<"multiplication not possible "<<endl;
+                return;
+            }
             for(int i=0;i<row;i++){
                 for(int j=0;j<col;j++){
                     cout<<matrix[i][j]<<" ";
@@ -37,7 +44,7 @@ class Matrix{
 };
 
 Matrix operator*(Matrix& mat1, Matrix& mat2){
-    if(mat1.col != mat2.row) return Matrix(NULL,NULL);
+    if(mat1.col != mat2.row) return Matrix();
     Matrix ans(mat1.row, mat2.col);
     int k;
     for(int i=0;i<mat1.row;i++){
@@ -54,10 +61,20 @@ Matrix operator*(Matrix& mat1, Matrix& mat2){
 }
 
 int main(){
-    Matrix mat1(2,2);
-    Matrix mat2(2,2);
+    int rows1,cols1;
+    int rows2,cols2;
+    cout<<"enter number of rows and columns in matrix 1 "<<endl;
+    cin>>rows1;
+    cin>>cols1;
+    Matrix mat1(rows1,cols1);
     mat1.input();
+
+    cout<<"Enter number of rows and columns in matrix 2"<<endl;
+    cin>>rows2;
+    cin>>cols2;
+    Matrix mat2(rows2,cols2);
     mat2.input();
+
     Matrix ans = mat1*mat2;
     ans.display();
     return 0;

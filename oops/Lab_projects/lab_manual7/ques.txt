@@ -1,0 +1,88 @@
+1. Create a class University with public member variables name, location, and set of departments. Provide public member functions to set and get these values, as well as to add or remove departments. 
+2. Create a class University with public member variables name, location, and set of departments. Provide public member functions to set and get these values, as well as to add or remove departments. 
+3. Write a program to demonstrate the use of Call by Value and Call by Reference methods of function. 
+4. Create a class named Room and define the data and function members. Declare the object of Room class and calculate its area and volume by passing the parameters length, breadth, height. 
+5. Create a class named Shape and find the volume of Sphere, Cylinder, and Cuboid by overloading class functions getVolume. Pass required parameters to get the volume of the desired shape. 
+6. Create a class Shape that encapsulates private data: radius, length, breadth, and height, and volume function. Design main function, which initiates various objects, including Sphere, Cylinder, and Cuboid. Use the Switch Case statement to calculate the volume of a shape using function overloading. 
+7. Write a C++ program to implement the Operator Overloading  with friend functions for Complex Numbers Using Switch Case in C++. Use choices in switch case to perform addition, subtraction and multiplication of two complex numbers.
+8. To implement data type conversions (Basic to Class, Class to Basic, and Class to Class) in C++ using temperature conversion between Celsius and Fahrenheit classes, with the temperature taken in Kelvin.
+9. Implementation of Hybrid Inheritance in C++ Using Teaching Assistant Example (Person → Employee & Student → TeachingAssistant)
+
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class
+class Person {
+public:
+    string name;
+    int age;
+
+    void getPersonDetails() {
+        cout << "Enter name: ";
+        cin >> name;
+        cout << "Enter age: ";
+        cin >> age;
+    }
+
+    void showPersonDetails() {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+// Employee inherits virtually
+class Employee : virtual public Person {
+public:
+    string empID;
+
+    void getEmployeeDetails() {
+        cout << "Enter Employee ID: ";
+        cin >> empID;
+    }
+
+    void showEmployeeDetails() {
+        cout << "Employee ID: " << empID << endl;
+    }
+};
+
+// Student inherits virtually
+class Student : virtual public Person {
+public:
+    string studentID;
+
+    void getStudentDetails() {
+        cout << "Enter Student ID: ";
+        cin >> studentID;
+    }
+
+    void showStudentDetails() {
+        cout << "Student ID: " << studentID << endl;
+    }
+};
+
+// TeachingAssistant inherits from both Employee and Student
+class TeachingAssistant : public Employee, public Student {
+public:
+    void getTADetails() {
+        getPersonDetails();
+        getEmployeeDetails();
+        getStudentDetails();
+    }
+
+    void showTADetails() {
+        showPersonDetails();
+        showEmployeeDetails();
+        showStudentDetails();
+    }
+};
+
+int main() {
+    TeachingAssistant ta;
+    ta.getTADetails();
+    cout << "\n--- Teaching Assistant Details ---\n";
+    ta.showTADetails();
+    return 0;
+}

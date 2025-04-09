@@ -6,5 +6,5 @@ void sum(int a, int b, int c=3){
 }
 
 int main(){
-    sum(1,2);
+    sum(0,0,1);
 }
