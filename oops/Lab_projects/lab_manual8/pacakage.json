@@ -1,0 +1,3 @@
+{
+    "script":" g++ dervived.cpp && ./a.out"
+}
