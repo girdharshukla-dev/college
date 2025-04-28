@@ -1,0 +1,7 @@
+Till 24 you all need to complete your DSA practical file
+Insertion and deletion in array
+Insertion and deletion in linked list....at head at tail and at any index k
+Operations on stack using both array and linked list
+Infix postfix conversion 
+Operations on queue
+Binary search tree

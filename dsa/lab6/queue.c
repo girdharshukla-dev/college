@@ -7,7 +7,7 @@ int rear = -1;
 
 void enqueue(int x){
     if(rear == SIZE-1){
-        printf("Stack overflow\n");
+        printf("Queue overflow\n");
     }
     else if(front == -1 && rear ==-1){
         front++;
@@ -24,7 +24,7 @@ void enqueue(int x){
 
 void dequeue(){
     if(front>rear || rear==-1){
-        printf("Stack underflow , cannot delete \n");
+        printf("Queue underflow , cannot delete \n");
     }
     else{
         int a = queue[front];
@@ -35,7 +35,7 @@ void dequeue(){
 
 int peek(){
     if(rear == -1 || front>rear){
-        printf("Stack underflow\n");
+        printf("Queue underflow\n");
     }
     else{
         int a = queue[front];
@@ -46,7 +46,7 @@ int peek(){
 
 void display(){
     if(rear==-1 || front>rear){
-        printf("Stack underflow\n");
+        printf("Queue underflow\n");
     }
     else{
         printf("the elements from front to rear are \n");
@@ -63,14 +63,14 @@ int main(){
     enqueue(3);
     display();
     dequeue();
-    display();
+    // display();
     peek();
     dequeue();
     dequeue();
     dequeue();
     enqueue(100);
     enqueue(200);
-    peek();
+    // peek();
     display();
     return 0;
 }
