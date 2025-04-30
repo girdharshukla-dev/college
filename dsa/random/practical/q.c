@@ -53,16 +53,5 @@ void display(){
 }
 
 int main(){
-    push(1);
-    push(2);
-    push(3);
-    push(4);
-    push(5);
-    display();
-    push(6);
-    pop();
-    display();
-    push(7);
-    peek();
-    display();
+    
 }
