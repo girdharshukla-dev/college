@@ -1,0 +1,3 @@
+/mnt/c/Users/girdh/codeplayground/college/oops/exam/CMakeFiles/main.dir
+/mnt/c/Users/girdh/codeplayground/college/oops/exam/CMakeFiles/edit_cache.dir
+/mnt/c/Users/girdh/codeplayground/college/oops/exam/CMakeFiles/rebuild_cache.dir
